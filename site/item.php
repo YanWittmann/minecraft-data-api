@@ -1,5 +1,7 @@
 <?php
+
     include("login.php");
+    include("functions.php");
 
 
     $type = '';
@@ -32,6 +34,14 @@
 
     if (isset($_POST['restores'])) $restores = $_POST['restores'];
     else if (isset($_GET['restores'])) $restores = $_GET['restores'];
+
+    
+    $type = escape($type);
+    $name = escape($name);
+    $identifier = escape($identifier);
+    $rarity = escape($rarity);
+    $stackableCount = escape($stackableCount);
+    $restores = escape($restores);
 
 
     $hasParam = false;

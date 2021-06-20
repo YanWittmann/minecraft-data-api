@@ -1,5 +1,7 @@
 <?php
+
     include("login.php");
+    include("functions.php");
 
 
     $type = '';
@@ -44,6 +46,12 @@
 
     if (isset($_POST['stackableCount'])) $stackableCount = $_POST['stackableCount'];
     else if (isset($_GET['stackableCount'])) $stackableCount = $_GET['stackableCount'];
+
+
+    $type = escape($type);
+    $name = escape($name);
+    $identifier = escape($identifier);
+    $stackableCount = escape($stackableCount);
 
 
     $hasParam = false;
