@@ -23,7 +23,7 @@ GET/POST parameters (prioritises POST):
 
 itemorblock.php
 GET/POST parameters (prioritises POST):
-    - type (either 'create'/'use'/'indirect'/'spawn'/'education')
+    - type (either 'create'/'use'/'indirect'/'spawn'/'education'/'normal'/'technical'/'removed')
     - name
     - identifier
     - isRenewable

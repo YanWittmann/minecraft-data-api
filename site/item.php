@@ -99,7 +99,7 @@
             "description" => $row['description'],
             "type" => $row['type'],
             "wikiPage" => $row['wikiPage'],
-            "images" => $row['image'],
+            "image" => $row['image'],
             "isRenewable" => $row['isRenewable'],
             "stackableCount" => $row['stackableCount'],
             "rarity" => $row['rarity'],
@@ -108,7 +108,7 @@
         foreach ($item as &$str) {
             $str = str_replace('"', '', $str);
         }
-        array_push($items, $row['name'], $item);
+        array_push($items, $item);
     }
 
     $jsonResponse->count = $count;

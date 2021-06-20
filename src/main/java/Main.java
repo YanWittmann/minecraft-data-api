@@ -31,7 +31,7 @@ public class Main {
 
     public static void extractItems() throws IOException {
         List<String> overrideMinecraftIdentifiers = new File("res/override_minecraft_item_ids.txt").readToArrayList();
-        BufferedImage allTextures = readImage(new File("res/itemtextures.png"));
+        BufferedImage allTextures = readImage(new File(API_TOOLS.get(new URL("https://static.wikia.nocookie.net/minecraft_gamepedia/images/f/f5/ItemCSS.png/revision/latest"), 864000000)));
         List<Item> items = new ArrayList<>();
         String currentItemType = "";
         System.out.println("Extracting items...");
@@ -62,7 +62,7 @@ public class Main {
                         .replace("&#8204;", "").replaceAll("\\[[^]]*]", "")
                         .replaceAll("music_disc_\\(([^)]*)\\)", "music_disc_$1").replace("raw_", "")
                         .replaceAll("banner_pattern_\\(([^)]*)\\)", "$1_banner_pattern")
-                        .replaceAll("\\([^)]*\\)", "").replaceAll("_$","");
+                        .replaceAll("\\([^)]*\\)", "").replaceAll("_$", "");
                 for (String overrideMinecraftIdentifier : overrideMinecraftIdentifiers) {
                     if (overrideMinecraftIdentifier.length() > 0 && !overrideMinecraftIdentifier.startsWith("#")) {
                         String[] split = overrideMinecraftIdentifier.split(" ");
@@ -73,7 +73,7 @@ public class Main {
                     }
                 }
 
-                items.add(new Item(currentItemType, itemName, minecraftIdentifier, wikiPage, new File(API_TOOLS.get(new URL(wikiPage), ApiTools.GET_LOCAL_VERSION_OR_DOWNLOAD)), imageLocation));
+                items.add(new Item(currentItemType, itemName, minecraftIdentifier, wikiPage, new File(API_TOOLS.get(new URL(wikiPage), 864000000)), imageLocation));
             }
         }
 
@@ -177,7 +177,7 @@ public class Main {
                     }
                 }
 
-                blocks.add(new Block(currentBlockType, itemName, minecraftIdentifier, wikiPage, images, notes, new File(API_TOOLS.get(new URL(wikiPage), ApiTools.GET_LOCAL_VERSION_OR_DOWNLOAD))));
+                blocks.add(new Block(currentBlockType, itemName, minecraftIdentifier, wikiPage, images, notes, new File(API_TOOLS.get(new URL(wikiPage), 864000000))));
             }
         }
 

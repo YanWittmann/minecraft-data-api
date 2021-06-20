@@ -143,11 +143,11 @@
         foreach ($item as &$str) {
             $str = str_replace('"', '', $str);
         }
-        array_push($items, $row['name'], $item);
+        array_push($items, $item);
     }
 
     $jsonResponse->count = $count;
-    $jsonResponse->items = $items;
+    $jsonResponse->blocks = $items;
 
     echo str_replace("\\", "", json_encode($jsonResponse, JSON_NUMERIC_CHECK));
 

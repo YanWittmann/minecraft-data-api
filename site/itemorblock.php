@@ -77,7 +77,7 @@
             "description" => $row['description'],
             "type" => $row['type'],
             "wikiPage" => $row['wikiPage'],
-            "images" => $row['image'],
+            "image" => $row['image'],
             "isRenewable" => $row['isRenewable'],
             "stackableCount" => $row['stackableCount'],
             "rarity" => $row['rarity'],
@@ -86,7 +86,7 @@
         foreach ($item as &$str) {
             $str = str_replace('"', '', $str);
         }
-        array_push($items, $row['name'], $item);
+        array_push($items, $item);
     }
 
     $itemPart->count = $countItems;
@@ -123,7 +123,7 @@
         foreach ($block as &$str) {
             $str = str_replace('"', '', $str);
         }
-        array_push($blocks, $row['name'], $block);
+        array_push($blocks, $block);
     }
 
     $blockPart->count = $countBlocks;
