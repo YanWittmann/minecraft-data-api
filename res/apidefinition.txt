@@ -1,0 +1,30 @@
+
+block.php
+GET/POST parameters (prioritises POST):
+    - type (either 'normal'/'technical'/'education'/'removed')
+    - name
+    - identifier
+    - isRenewable
+    - isLuminant
+    - isTransparent
+    - isFlammable
+    - isFlammableFromLava
+    - stackableCount
+
+item.php
+GET/POST parameters (prioritises POST):
+    - type (either 'create'/'use'/'indirect'/'spawn'/'education')
+    - name
+    - identifier
+    - isRenewable
+    - rarity
+    - stackableCount
+    - restores
+
+itemorblock.php
+GET/POST parameters (prioritises POST):
+    - type (either 'create'/'use'/'indirect'/'spawn'/'education')
+    - name
+    - identifier
+    - isRenewable
+    - stackableCount

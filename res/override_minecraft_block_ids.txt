@@ -1,0 +1,13 @@
+minecraft:bamboo_shoot minecraft:bamboo_sapling
+minecraft:lapis_lazuli_block minecraft:lapis_block
+minecraft:deepslate_lapis_lazuli_ore minecraft:deepslate_lapis_ore
+minecraft:hay_bale minecraft:hay_block
+minecraft:jigsaw_block minecraft:jigsaw
+minecraft:lapis_lazuli_ore minecraft:lapis_ore
+minecraft:light_block minecraft:light
+minecraft:redstone_comparator minecraft:comparator
+minecraft:redstone_repeater minecraft:repeater
+minecraft:smooth_quartz_block minecraft:smooth_quartz
+minecraft:vines minecraft:vine
+minecraft:waxed_block_of_copper minecraft:waxed_copper_block
+minecraft:wheat_crops minecraft:wheat
