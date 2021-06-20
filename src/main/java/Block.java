@@ -129,7 +129,7 @@ public class Block {
                 } else {
                     descriptionBuilder.append(line.replaceAll("<[^>]+>", "").replace("&amp;quot;", "\"")
                             .replace("&amp;gt;", ">").replaceAll("&#91;.&#93;", "")
-                    .replace("&#8204;", "").replace("&#8260;", "/"));
+                            .replace("&#8204;", "").replace("&#8260;", "/"));
                 }
             }
         }
@@ -154,7 +154,7 @@ public class Block {
         parameters.add(new BasicNameValuePair("isTransparent", this.isTransparent ? "1" : "0"));
         parameters.add(new BasicNameValuePair("isFlammable", this.isFlammable ? "1" : "0"));
         parameters.add(new BasicNameValuePair("isFlammableFromLava", this.isFlammableFromLava ? "1" : "0"));
-        return HTTPStuff.send("http://yanwittmann.de/api/mcdata/createblock.php", parameters);
+        return HTTPStuff.send(MyCredentialsProvider.FTP_SERVER_URL + MyCredentialsProvider.FTP_SERVER_PATH + "createblock.php", parameters);
     }
 
     @Override

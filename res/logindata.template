@@ -1,3 +1,5 @@
 server
 user
 password
+serverurl
+serverpath

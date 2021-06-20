@@ -1,11 +1,15 @@
 # Minecraft Data Api
-An HTTP API that allows for easily getting item and block information.
+An HTTP API that allows for easily getting item and block information.  
+Most data has been extracted from the [Minecraft Wiki](https://minecraft.fandom.com/wiki/).
+See [License information](#license-information) for more information.  
+All textures belong to Mojang Studios.
 
 - [How to use](#how-to-use)
   - [Item information](#item-information)
   - [Block information](#block-information)
   - [Item and block information](#item-and-block-information)
 - [How to build it yourself](#how-to-build-it-yourself)
+- [License information](#license-information)
 
 <a name="how-to-use"></a>
 ## How to use
@@ -42,7 +46,7 @@ Add the following parameters to filter the results:
   - restores (`int`)
 
 **Examples**
-- `http://yanwittmann.de/api/mcdata/item.php?name=Iron%20Ingot` will return
+- `http://yanwittmann.de/api/mcdata/item.php?name=Iron%20Ingot` will return  
   ````
   {
     "count": 1,
@@ -62,7 +66,7 @@ Add the following parameters to filter the results:
     ]
   }
   ````
-- `http://yanwittmann.de/api/mcdata/item.php?stackableCount=64&restores=4&rarity=Common` will return
+- `http://yanwittmann.de/api/mcdata/item.php?stackableCount=64&restores=4&rarity=Common` will return  
   ````
   {
     "count": 3,
@@ -143,7 +147,7 @@ Add the following parameters to filter the results:
   - bestTool (`string`)
 
 **Examples**
-- `http://yanwittmann.de/api/mcdata/block.php?isLuminant=1&isTransparent=1?stackableCount=16&isRenewable=0` will return
+- `http://yanwittmann.de/api/mcdata/block.php?isLuminant=1&isTransparent=1?stackableCount=16&isRenewable=0` will return  
   ````
   {
     "count": 11,
@@ -252,7 +256,7 @@ Add the following parameters to filter the results:
     - restores (`int`)
 
 **Examples**
-- `http://yanwittmann.de/api/mcdata/itemorblock.php?identifier=minecraft:acacia_door` will return
+- `http://yanwittmann.de/api/mcdata/itemorblock.php?identifier=minecraft:acacia_door` will return  
   ````
   {
     "totalCount": 1,
@@ -285,7 +289,7 @@ Add the following parameters to filter the results:
     }
   }
   ````
-- `http://yanwittmann.de/api/mcdata/itemorblock.php?identifier=minecraft:acacia_door` will return
+- `http://yanwittmann.de/api/mcdata/itemorblock.php?identifier=minecraft:acacia_door` will return  
   ````
   {
     "totalCount": 1,
@@ -315,3 +319,12 @@ Add the following parameters to filter the results:
 
 <a name="how-to-build-it-yourself"></a>
 ## How to build it yourself
+If you want to build it yourself, please [contact me](mailto:mail@yanwittmann.de?subject=Minecraft%20API%20-%20Build%20it%20yourself).  
+The process requires a lot of steps, so I won't write it all down here but rather help you for your case.
+
+<a name="license-information"></a>
+## License information
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.  
+The [Minecraft Wiki](https://minecraft.fandom.com/wiki/Minecraft_Wiki:Copyrights) is Licensed under the
+[Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)](https://creativecommons.org/licenses/by-nc-sa/3.0/)
+License.

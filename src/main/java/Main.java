@@ -15,7 +15,7 @@ import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        //extractBlocks();
+        extractBlocks();
         extractItems();
     }
 
@@ -184,8 +184,8 @@ public class Main {
         for (Block block : blocks) {
             block.grabDataFromWikiPage();
             System.out.println(block);
-            //String upload = block.upload();
-            //if (upload.contains("Error")) break;
+            String upload = block.upload();
+            if (upload.contains("Error")) break;
         }
         System.out.println(blocks.size());
     }

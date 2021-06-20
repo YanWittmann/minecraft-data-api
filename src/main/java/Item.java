@@ -112,12 +112,12 @@ public class Item {
     }
 
     public void uploadImage(FTPClient client) throws IOException {
-        String imageUrl = "/api/mcdata/img/" + minecraftIdentifier.replace(":", "") + ".png";
+        String imageUrl = MyCredentialsProvider.FTP_SERVER_PATH + "img/" + minecraftIdentifier.replace(":", "") + ".png";
         client.storeFile(imageUrl, new FileInputStream(imageFile));
     }
 
     public String upload() throws IOException {
-        String imageUrl = "http://yanwittmann.de/api/mcdata/img/" + minecraftIdentifier.replace(":", "") + ".png";
+        String imageUrl = MyCredentialsProvider.FTP_SERVER_URL + MyCredentialsProvider.FTP_SERVER_PATH + "img/" + minecraftIdentifier.replace(":", "") + ".png";
 
         List<BasicNameValuePair> parameters = new ArrayList<>();
         parameters.add(new BasicNameValuePair("itemType", this.itemType));
@@ -130,7 +130,7 @@ public class Item {
         parameters.add(new BasicNameValuePair("stackableCount", this.stackableCount + ""));
         parameters.add(new BasicNameValuePair("rarity", this.rarity));
         parameters.add(new BasicNameValuePair("restores", this.restores + ""));
-        return HTTPStuff.send("http://yanwittmann.de/api/mcdata/createitem.php", parameters);
+        return HTTPStuff.send(MyCredentialsProvider.FTP_SERVER_URL + MyCredentialsProvider.FTP_SERVER_PATH + "createitem.php", parameters);
     }
 
     private BufferedImage cropImage(BufferedImage src, Rectangle rect) {
